@@ -8,7 +8,7 @@ public class FirstSpeechController {
 
     @GetMapping("/first-words")
     public String firstWords(){
-        return "Give me a scotch, I am starving!!";
+        return "Give me a scotch, I'm starving!!";
     }
 
 }
