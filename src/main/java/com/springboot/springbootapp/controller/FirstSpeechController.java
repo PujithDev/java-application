@@ -16,4 +16,9 @@ public class FirstSpeechController {
         return "Hmmm tastes good!";
     }
 
+    @GetMapping("/third-word")
+    public String thirdWords(){
+        return "One more please!";
+    }
+
 }
