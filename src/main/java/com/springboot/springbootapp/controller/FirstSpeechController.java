@@ -11,4 +11,9 @@ public class FirstSpeechController {
         return "Give me a scotch, I'm starving!!";
     }
 
+    @GetMapping("/second-words")
+    public String secondWords(){
+        return "Hmmm tastes good!";
+    }
+
 }
