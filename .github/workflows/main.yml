@@ -1,0 +1,28 @@
+name: Java Maven Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+
+    - name: Set up Maven
+      run: |
+        choco install maven
+        RefreshEnv.cmd
+        mvn -version
+
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
